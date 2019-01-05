@@ -12,7 +12,7 @@ var config = {
 
 firebase.initializeApp(config);
 
-database = firebase.database();
+var database = firebase.database();
 
 // Initialize New Employee Variables
 var employee = "";
@@ -44,5 +44,12 @@ $("#add-employee-btn").on("click", function(event) {
     $("#role-input").val('');
     $("#start-input").val('');
     $("#rate-input").val('');
+
+    database.ref().push({
+        employee: employee,
+        role: role,
+        startDate: startDate,
+        monthlyRate: monthlyRate
+    });
 
 })
