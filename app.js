@@ -18,7 +18,7 @@ var database = firebase.database();
 var employee = "";
 var role = "";
 var startDate = "";
-var montlyRate = "";
+var monthlyRate = "";
 
 console.log("values initialized")
 
@@ -32,7 +32,7 @@ $("#add-employee-btn").on("click", function(event) {
     // Values from Add Employee Inputs
     employee = $("#employee-name-input").val().trim();
     role = $("#role-input").val().trim();
-    startDate = $("#start-input").val().trim();
+    startDate = moment($("#start-input").val().trim(),"MM/DD/YYYY").format("MM/DD/YYYY");
     monthlyRate = $("#rate-input").val().trim();
 
     console.log(employee);
