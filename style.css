@@ -1,12 +1,10 @@
 .new-employee-box{
     z-index: 1000;
     position: fixed;
-    right: 0;
-    top: 0;
-
+    right: 1;
+    top: 2%;
 }
 
 .new-employee{
-    margin: 10px,10px,0,0;
     padding: 10px 20px;
 }
