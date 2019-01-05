@@ -8,3 +8,16 @@
 .new-employee{
     padding: 10px 20px;
 }
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+thead{
+    margin: auto;
+}
+
+tbody{
+    margin: auto;
+}
