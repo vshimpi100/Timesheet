@@ -53,3 +53,21 @@ $("#add-employee-btn").on("click", function(event) {
     });
 
 })
+
+database.ref().on("child_added",function(childSnapshot){
+    var newRow = $("<tr>");
+    newRow.append("<td>"+childSnapshot.val().employee+"</td>");
+    newRow.append("<td>"+childSnapshot.val().role+"</td>");
+    newRow.append("<td>"+childSnapshot.val().startDate+"</td>");
+
+    var monthsWorked = 0;
+
+    newRow.append("<td>"+monthsWorked+"</td>");
+    newRow.append("<td>"+childSnapshot.val().monthlyRate+"</td>");
+
+    var totalBilled = monthsWorked*monthlyRate;
+
+    newRow.append("<td>"+totalBilled+"</td>")
+
+    $("#employee-table").append(newRow)
+})
