@@ -12,16 +12,22 @@ var config = {
 
 firebase.initializeApp(config);
 
+database = firebase.database();
+
 // Initialize New Employee Variables
 var employee = "";
 var role = "";
 var startDate = "";
 var montlyRate = "";
 
+console.log("values initialized")
+
 // Add New Employee
 $("#add-employee-btn").on("click", function(event) {
 
     event.preventDefault();
+
+    console.log("button clicked");
 
     // Values from Add Employee Inputs
     employee = $("#employee-name-input").val().trim();
