@@ -40,4 +40,9 @@ $("#add-employee-btn").on("click", function(event) {
     console.log(startDate);
     console.log(monthlyRate);
 
+    $("#employee-name-input").val('');
+    $("#role-input").val('');
+    $("#start-input").val('');
+    $("#rate-input").val('');
+
 })
